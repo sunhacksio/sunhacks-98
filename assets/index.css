@@ -1,0 +1,174 @@
+.main {
+    transform: scale(2);
+    position: fixed;
+}
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-25%, -25%)
+}
+
+.title-bar {
+    background: linear-gradient(
+        90deg
+        ,#D0697D,#E6CBCA);
+    font-family: "MS Sans Serif"
+}
+
+body {
+    background: #1C1B3E;
+    background-image: url("/assets/images/tile-background.png");
+    background-repeat: repeat;  
+}
+
+.window-body {
+    font-family: "MS Sans Serif"
+}
+.window-top {
+    justify-content: flex-start;
+    display: flex;
+}
+.window-splash {
+    padding-right: 8px;
+}
+.window-footer {
+    text-align: right;
+}
+.title {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.splash-art {
+    width: 120px;
+    height: 100%;
+    box-sizing: border-box;
+    border: 1px solid #1C1B3E;
+    background: #7187A2;
+    flex-direction: column;
+    justify-content: space-between;
+    display: flex;
+}
+
+.title-bar, .window, button, input, label, option, select, textarea, ul.tree-view {
+    font-family: "MS Sans Serif";
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    color: #7187A2;
+  }
+
+.task-bar {
+    background-color: silver;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 28px;
+    padding: 2px 2px 0 2px;
+    /*box-shadow: inset -1px -1px #0a0a0a,inset 1px 1px #dfdfdf,inset -2px -2px grey,inset 2px 2px #fff;*/
+    box-shadow: inset 0px 1px #dfdfdf, inset 0px 2px #fff;
+
+    z-index: 999;
+
+    width: 100vw;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-begin;
+    align-items: center;
+
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.task-bar__divider {
+    box-shadow: inset -1px -1px #0a0a0a,inset 1px 1px #dfdfdf,inset -2px -2px grey,inset 2px 2px #fff;
+    height: 22px;
+    width: 2px;
+    margin: 0px 2px;
+}
+
+.task-bar__quick {
+    margin: 0 2px;
+    cursor: pointer;
+    padding: 2px;
+}
+.task-bar__quick:hover {
+    box-shadow: -1px -1px #dfdfdf, 1px 1px gray;
+}
+.task-bar__quick:active {
+    box-shadow: 1px 1px #dfdfdf, -1px -1px gray;
+}
+
+.task-bar__main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.task-bar__launch {
+    /*min-width: 0px !important;*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 5px !important;
+    margin: 2px;
+    cursor: pointer;
+}
+.task-bar__launch > img {
+    width: 16px;
+    height: 16px;
+}
+.task-bar__launch--active {
+    box-shadow: var(--inset__inverse);
+    background-image: url(../img/selected_texture.png);
+}
+.task-bar__launch > img {
+    margin-right: 4px;
+}
+
+.task-bar__tray {
+    height: 22px;
+    box-shadow: var(--icon-shadow__active);
+    padding: 0 2px;
+    margin: 0 2px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.task-bar__tray__icon {
+    margin: 0 1px;
+}
+
+#start-btn {
+    min-width: 0px !important;
+    padding: 0 2px;
+    cursor: pointer;
+}
+#start-btn > img {
+    margin-top: 1px;
+}
+#start-btn:active > img {
+    transform: translate(1px, 1px);
+}
+
+#start-btn.start-btn--active {
+    transform: translate(1px, 1px);
+    box-shadow: var(--inset__inverse);
+}
+#start-btn.start-btn--active > img {
+    border: 1px dotted black;
+    margin: -1px;
+}
