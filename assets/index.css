@@ -1,13 +1,11 @@
-.main {
-    transform: scale(2);
-    position: fixed;
-}
 .centered {
     position: fixed;
     top: 50%;
     left: 50%;
     /* bring your own prefixes */
-    transform: translate(-25%, -25%)
+    display: flex;
+    transform: scale(2) translate(-25%, -25%);
+    transform-origin: 50% 50%;
 }
 
 .title-bar {
