@@ -19,73 +19,123 @@
 
 <body>
 
-    <div class=main>
-    <div class=centered>
-        <div class="window" style="width: 500px">
-            <div class="title-bar">
-                <div class="title-bar-text">sunhacks 2021 setup wizard</div>
-                <div class="title-bar-controls">
-                    <button aria-label="Help"></button>
+    <div class="main">
+        <div class="centered" id="main">
+            <div class="window" style="width: 500px;">
+                <div class="title-bar">
+                    <div class="title-bar-text">sunhacks 2021 setup wizard</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Help"></button>
+                    </div>
                 </div>
-            </div>
-            <div class="window-body">
-                <div class="window-top">
-                    <div class="window-splash">
-                        <div class="splash-art">
-                            <img src="assets/images/top-party.png" alt=""
-                                style="width:50%; transform: translate(5px, 5px);">
-                            <img src="assets/images/computer.png" alt="" style="width:60%; margin:auto;">
-                            <img src="assets/images/bottom-party.png" alt=""
-                                style="width:60%; transform: translate(-5px, -5px); margin-left: auto;">
+                <div class="window-body">
+                    <div class="window-top">
+                        <div class="window-splash">
+                            <div class="splash-art">
+                                <img src="assets/images/top-party.png" alt=""
+                                    style="width:50%; transform: translate(5px, 5px);">
+                                <img src="assets/images/computer.png" alt="" style="width:60%; margin:auto;">
+                                <img src="assets/images/bottom-party.png" alt=""
+                                    style="width:60%; transform: translate(-5px, -5px); margin-left: auto;">
+                            </div>
+                        </div>
+                        <div class="window-info">
+                            <div class="title">welcome to sunhacks</div>
+                            <p><strong>Online and at Arizona State University, October 1st - 3rd 2021</strong></p>
+                            <p>The sunhacks setup wizards (organizers) are installing the 2021 event.
+                                Please wait while registration is being setup...</p>
+                            <form id="subscribe" action="https://sendy.sunhacks.io/subscribe" method="POST"
+                                accept-charset="utf-8" oninput="name.value = FirstName.value + ' ' + LastName.value">
+                                <input type="hidden" name="list" value="3iMgiuJkeBTsOxNZWLjDDQ" />
+                                <input type="hidden" name="name">
+                                <fieldset>
+                                    <legend>Hacker Registration</legend>
+                                    Registration starts <strong>July 19th</strong>. Sign up now to get notified:
+                                    <div class="field-row-stacked" style="width: 200px; margin-top: 6px">
+                                        <label for="FirstName">First Name</label>
+                                        <input id="FirstName" type="text" name="FirstName" required />
+                                    </div>
+                                    <div class="field-row-stacked" style="width: 200px">
+                                        <label for="LastName">Last Name</label>
+                                        <input id="LastName" type="text" name="LastName" required />
+                                    </div>
+                                    <div class="field-row-stacked" style="width: 200px">
+                                        <label for="email">Email</label>
+                                        <input id="email" type="email" name="email" required />
+                                    </div>
+                                    <div class="field-row-stacked">
+                                        <input type="checkbox" name="gdpr" id="gdpr" required>
+                                        <label for="gdpr">Send me emails about sunhacks</label>
+                                    </div>
+                                    <div class="field-row-stacked">
+                                        <button type="submit" id="submit" disabled>Notify me about sunhacks
+                                            registration</button>
+                                    </div>
+                                </fieldset>
+                            </form>
+
+                            <div style="justify-content: space-between; display: flex;">
+                                <p>Interested in...</p>
+                                <section class="field-row" style="justify-content: flex-end">
+                                    <button> Sponsoring </button>
+                                    <a href="https://forms.gle/vGHTGASK2a1kPi9D8" target="_blank" rel="noopener noreferrer">
+                                        <button> Mentoring, speaking, or judging </button>
+                                    </a>
+                                </section>
+                            </div>
                         </div>
                     </div>
-                    <div class="window-info">
-                        <div class="title">welcome to sunhacks</div>
-                        <p><strong>Online and at Arizona State University, October 1st - 3rd 2021</strong></p>
-                        <p>The sunhacks setup wizards (organizers) are installing the 2021 event.
-                            Please wait while registration is being setup...</p>
-                        <fieldset>
-                            <legend>Hacker Registration</legend>
-                            Registration starts <strong>July 19th</strong>. Sign up now to get notified:
-                            <div class="field-row-stacked" style="width: 200px; margin-top: 6px">
-                                <label for="text17">First Name</label>
-                                <input id="text17" type="text" />
-                            </div>
-                            <div class="field-row-stacked" style="width: 200px">
-                                <label for="text17">Last Name</label>
-                                <input id="text17" type="text" />
-                            </div>
-                            <div class="field-row-stacked" style="width: 200px">
-                                <label for="text17">Email</label>
-                                <input id="text17" type="text" />
-                            </div>
-                            <div class="field-row-stacked">
-                                <input type="checkbox" id="example1">
-                                <label for="example1">Send me emails about sunhacks</label>
-                                <button>Notify me about sunhacks registration</button>
-                            </div>
-                        </fieldset>
-                        <div style="justify-content: space-between; display: flex;">
-                            <p>Interested in...</p>
-                            <section class="field-row" style="justify-content: flex-end">
-                                <button> Sponsoring </button>
-                                <button> Mentoring, speaking, or judging </button>
-                            </section>
-                        </div>
-
+                    <div class="window-footer">
+                        <hr class="hr--accent">
+                        <p>Question? Click the help button in the top right or send an email to 
+                            <a href="mailto:team@sunhacks.io">team@sunhacks.io</a>
+                        </p>
                     </div>
-
-                </div>
-                <hr class="hr--accent">
-                <div class="window-footer">
-                    <p>Question? Click the help button in the top right or send an
-                        <a href="mailto:team@sunhacks.io">email</a>
-                    </p>
                 </div>
             </div>
         </div>
-    </div>
-
+        <!-- <div class="centered" id="faq">
+            <div class="window" style="width: 250px">
+                </div>
+        </div> -->
+        <div class="centered" id="success" style="display: none;">
+            <div class="window" style="width: 250px">
+                <div class="title-bar">
+                    <div class="title-bar-text">sunhacks 2021 subscribe success</div>
+                    <div class="title-bar-controls">
+                        <button id="success_btn" aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <p>
+                        You have been successfully added to the sunhacks 2021 mailing list! We will let you know when
+                        the full site launches and registration opens.
+                    </p>
+                    <section class="field-row" style="justify-content: flex-end">
+                        <button id="success_ok">OK</button>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="centered" id="exists" style="display: none;">
+            <div class="window" style="width: 250px">
+                <div class="title-bar">
+                    <div class="title-bar-text">sunhacks 2021 already subscribed</div>
+                    <div class="title-bar-controls">
+                        <button id="exists_btn" aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <p>
+                        You're already subscribed to the sunhacks 2021 mailing list! We will let you know when the full
+                        site launches and registration opens.
+                    </p>
+                    <section class="field-row" style="justify-content: flex-end">
+                        <button id="exists_ok">OK</button>
+                    </section>
+                </div>
+            </div>
+        </div>
         <!-- <div class="task-bar"> 
             <button id="start-btn">
                 <img src="/assets/images/start-button.png" alt="">
@@ -98,4 +148,83 @@
         target="_blank"><img
             src="https://s3.amazonaws.com/logged-assets/trust-badge/2022/mlh-trust-badge-2022-white.svg"
             alt="Major League Hacking 2022 Hackathon Season" style="width:100%"></a>
+    <script>
+        const form = document.getElementById('subscribe');
+        form.addEventListener("change", () => {
+            document.getElementById('submit').disabled = !form.checkValidity()
+        });
+
+        document.getElementById('exists_btn').addEventListener('click', function () {
+            document.getElementById('exists').style.display = 'none';
+            document.getElementById('main').style.display = 'initial';
+        });
+        document.getElementById('exists_ok').addEventListener('click', function () {
+            document.getElementById('exists').style.display = 'none';
+            document.getElementById('main').style.display = 'initial';
+        });
+        document.getElementById('success_btn').addEventListener('click', function () {
+            document.getElementById('success').style.display = 'none';
+            document.getElementById('main').style.display = 'initial';
+        });
+        document.getElementById('success_ok').addEventListener('click', function () {
+            document.getElementById('success').style.display = 'none';
+            document.getElementById('main').style.display = 'initial';
+        });
+
+        /**
+        * Get the URL parameters
+        * source: https://css-tricks.com/snippets/javascript/get-url-variables/
+        * @param  {String} url The URL
+        * @return {Object}     The URL parameters
+        */
+        var getParams = function (url) {
+            var params = {};
+            var parser = document.createElement('a');
+            parser.href = url;
+            var query = parser.search.substring(1);
+            var vars = query.split('&');
+            for (var i = 0; i < vars.length; i++) {
+                var pair = vars[i].split('=');
+                params[pair[0]] = decodeURIComponent(pair[1]);
+            }
+            return params;
+        };
+
+        window.onload = function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('success')) {
+                window.document.getElementById('success').style.display = "initial";
+                window.document.getElementById('main').style.display = 'none';
+            }
+            else if (urlParams.has('exists')) {
+                window.document.getElementById('exists').style.display = "initial";
+                window.document.getElementById('main').style.display = 'none';
+            }
+        };
+    </script>
 </body>
+
+<!-- <form action="https://sendy.sunhacks.io/subscribe" method="POST" accept-charset="utf-8">
+	<label for="name">Name</label><br/>
+	<input type="text" name="name" id="name"/>
+	<br/>
+	<label for="email">Email</label><br/>
+	<input type="email" name="email" id="email"/>
+    <br/>
+    <label for="FirstName">First Name</label><br/>
+    <input type="text" name="FirstName" id="FirstName"/>
+    <br/>
+    <label for="LastName">Last Name</label><br/>
+    <input type="text" name="LastName" id="LastName"/><br/><br/>
+    <input type="checkbox" name="gdpr" id="gdpr"/>
+    <span><strong>Marketing permission</strong>: I give my consent to  to be in touch with me via email using the information I have provided in this form for the purpose of news, updates and marketing.</span>
+    <br/><br/>
+    <span><strong>What to expect</strong>: If you wish to withdraw your consent and stop hearing from us, simply click the unsubscribe link at the bottom of every email we send or contact us at team@sunhacks.io. We value and respect your personal data and privacy. To view our privacy policy, please visit our website. By submitting this form, you agree that we may process your information in accordance with these terms.</span>
+    <br/><br/><div style="display:none;">
+	<label for="hp">HP</label><br/>
+	<input type="text" name="hp" id="hp"/>
+	</div>
+	<input type="hidden" name="list" value="3iMgiuJkeBTsOxNZWLjDDQ"/>
+	<input type="hidden" name="subform" value="yes"/>
+	<input type="submit" name="submit" id="submit"/>
+</form> -->
