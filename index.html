@@ -21,22 +21,20 @@
 
     <div class="main">
         <div class="centered" id="main">
-            <div class="window" style="width: 500px;">
+            <div class="window setup" >
                 <div class="title-bar">
                     <div class="title-bar-text">sunhacks 2021 setup wizard</div>
                     <div class="title-bar-controls">
-                        <button aria-label="Help"></button>
+                        <button id="help" aria-label="Help"></button>
                     </div>
                 </div>
                 <div class="window-body">
                     <div class="window-top">
                         <div class="window-splash">
                             <div class="splash-art">
-                                <img src="assets/images/top-party.png" alt=""
-                                    style="width:50%; transform: translate(5px, 5px);">
-                                <img src="assets/images/computer.png" alt="" style="width:60%; margin:auto;">
-                                <img src="assets/images/bottom-party.png" alt=""
-                                    style="width:60%; transform: translate(-5px, -5px); margin-left: auto;">
+                                <img src="assets/images/top-party.png" alt="" class="top-party">
+                                <img src="assets/images/computer.png" alt="" class="computer">
+                                <img src="assets/images/bottom-party.png" alt="" class="bottom-party">
                             </div>
                         </div>
                         <div class="window-info">
@@ -51,15 +49,15 @@
                                 <fieldset>
                                     <legend>Hacker Registration</legend>
                                     Registration starts <strong>July 19th</strong>. Sign up now to get notified:
-                                    <div class="field-row-stacked" style="width: 200px; margin-top: 6px">
+                                    <div class="field-row-stacked" id=firstNameField >
                                         <label for="FirstName">First Name</label>
                                         <input id="FirstName" type="text" name="FirstName" required />
                                     </div>
-                                    <div class="field-row-stacked" style="width: 200px">
+                                    <div class="field-row-stacked" id="lastNameField">
                                         <label for="LastName">Last Name</label>
                                         <input id="LastName" type="text" name="LastName" required />
                                     </div>
-                                    <div class="field-row-stacked" style="width: 200px">
+                                    <div class="field-row-stacked" id="emailField" >
                                         <label for="email">Email</label>
                                         <input id="email" type="email" name="email" required />
                                     </div>
@@ -74,12 +72,12 @@
                                 </fieldset>
                             </form>
 
-                            <div style="justify-content: space-between; display: flex;">
+                            <div class="volunteering">
                                 <p>Interested in...</p>
-                                <section class="field-row" style="justify-content: flex-end">
-                                    <button> Sponsoring </button>
+                                <section class="field-row">
+                                    <button id="sponsoringBtn"> Sponsoring </button>
                                     <a href="https://forms.gle/vGHTGASK2a1kPi9D8" target="_blank" rel="noopener noreferrer">
-                                        <button> Mentoring, speaking, or judging </button>
+                                        <button id="volunteeringBtn"> Helping out </button>
                                     </a>
                                 </section>
                             </div>
@@ -99,7 +97,7 @@
                 </div>
         </div> -->
         <div class="centered" id="success" style="display: none;">
-            <div class="window" style="width: 250px">
+            <div class="window subscribed-box">
                 <div class="title-bar">
                     <div class="title-bar-text">sunhacks 2021 subscribe success</div>
                     <div class="title-bar-controls">
@@ -111,14 +109,14 @@
                         You have been successfully added to the sunhacks 2021 mailing list! We will let you know when
                         the full site launches and registration opens.
                     </p>
-                    <section class="field-row" style="justify-content: flex-end">
+                    <section class="field-row subscribed">
                         <button id="success_ok">OK</button>
                     </section>
                 </div>
             </div>
         </div>
         <div class="centered" id="exists" style="display: none;">
-            <div class="window" style="width: 250px">
+            <div class="window subscribed-box">
                 <div class="title-bar">
                     <div class="title-bar-text">sunhacks 2021 already subscribed</div>
                     <div class="title-bar-controls">
@@ -130,7 +128,7 @@
                         You're already subscribed to the sunhacks 2021 mailing list! We will let you know when the full
                         site launches and registration opens.
                     </p>
-                    <section class="field-row" style="justify-content: flex-end">
+                    <section class="field-row subscribed">
                         <button id="exists_ok">OK</button>
                     </section>
                 </div>
