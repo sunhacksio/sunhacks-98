@@ -21,11 +21,11 @@
 
     <div class="main">
         <div class="centered" id="main">
-            <div class="window setup" >
+            <div class="window setup">
                 <div class="title-bar">
                     <div class="title-bar-text">sunhacks 2021 setup wizard</div>
                     <div class="title-bar-controls">
-                        <button id="help" aria-label="Help"></button>
+                        <button id="help_btn" aria-label="Help"></button>
                     </div>
                 </div>
                 <div class="window-body">
@@ -49,7 +49,7 @@
                                 <fieldset>
                                     <legend>Hacker Registration</legend>
                                     Registration starts <strong>July 19th</strong>. Sign up now to get notified:
-                                    <div class="field-row-stacked" id=firstNameField >
+                                    <div class="field-row-stacked" id=firstNameField>
                                         <label for="FirstName">First Name</label>
                                         <input id="FirstName" type="text" name="FirstName" required />
                                     </div>
@@ -57,7 +57,7 @@
                                         <label for="LastName">Last Name</label>
                                         <input id="LastName" type="text" name="LastName" required />
                                     </div>
-                                    <div class="field-row-stacked" id="emailField" >
+                                    <div class="field-row-stacked" id="emailField">
                                         <label for="email">Email</label>
                                         <input id="email" type="email" name="email" required />
                                     </div>
@@ -76,7 +76,8 @@
                                 <p>Interested in...</p>
                                 <section class="field-row">
                                     <button id="sponsoringBtn"> Sponsoring </button>
-                                    <a href="https://forms.gle/vGHTGASK2a1kPi9D8" target="_blank" rel="noopener noreferrer">
+                                    <a href="https://forms.gle/vGHTGASK2a1kPi9D8" target="_blank"
+                                        rel="noopener noreferrer">
                                         <button id="volunteeringBtn"> Helping out </button>
                                     </a>
                                 </section>
@@ -85,17 +86,115 @@
                     </div>
                     <div class="window-footer">
                         <hr class="hr--accent">
-                        <p>Question? Click the help button in the top right or send an email to 
+                        <p>Question? Click the help button in the top right or send an email to
                             <a href="mailto:team@sunhacks.io">team@sunhacks.io</a>
                         </p>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- <div class="centered" id="faq">
-            <div class="window" style="width: 250px">
+        <div class="centered" id="faq" style="display:none">
+            <div class="window" style="width: 400px">
+                <div class="title-bar">
+                    <div class="title-bar-text">sunhacks 2021 FAQ</div>
+                    <div class="title-bar-controls">
+                        <button id="faq_btn" aria-label="Close"></button>
+                    </div>
                 </div>
-        </div> -->
+                <div class="window-body">
+                    <p><strong>Frequently Asked Questions</strong></p>
+                    <ul class="tree-view" style="overflow-y:auto; height: 200px">
+                        <li>
+                            <details>
+                                <summary>what is a hackathon?</summary>
+                                <ul>
+                                    <li>
+                                        24-36 hour prototyping marathon (we are 36 hours). Work on softwareor hardware
+                                        solutions to real
+                                        world problems, innovative projects, or anything you can think of!
+                                    </li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>
+                                    who can hack?
+                                </summary>
+                                <ul>
+                                    <li>
+                                        For the online portions of the hackathon, anybody and everybody over the age of
+                                        18 can participate!
+                                        However, only Arizona State University students can attend the in-person portion
+                                        of sunhacks.
+                                    </li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>
+                                    i've never programmed before, is it okay?
+                                </summary>
+                                <ul>
+                                    <li>
+                                        Yes! Programmers are not the only people who can participate at a hackathon.
+                                        We've had designers,
+                                        business people, and all sorts of people attend sunhacks. If you are new to
+                                        programming, we also
+                                        have mentors and workshops that can teach you how to code!
+                                    </li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>
+                                    how much does it cost to participate?
+                                </summary>
+                                <ul>
+                                    <li>
+                                        sunhacks costs zip, zilch and nada to participate! We will never charge you any
+                                        sort of
+                                        participation fee.
+                                    </li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>
+                                    what are the rules?
+                                </summary>
+                                <ul>
+                                    <li>
+                                        Follow the MLH code of conduct. 1-4 members to a team
+                                    </li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>
+                                    can I be a mentor/judge/speaker?
+                                </summary>
+                                <ul>
+                                    <li>
+                                        All are eligible to be a mentor or speaker regardless of prior experience
+                                        (though you should be 18
+                                        or older). If you are a hacker you cannot be a judge though. As we have limited
+                                        space for speakers
+                                        and judges, those will be selected based on talk or experience respectively and
+                                        you will receive
+                                        confirmation from us when it comes time.
+                                    </li>
+                                </ul>
+                            </details>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <div class="centered" id="success" style="display: none;">
             <div class="window subscribed-box">
                 <div class="title-bar">
@@ -168,6 +267,14 @@
             document.getElementById('success').style.display = 'none';
             document.getElementById('main').style.display = 'initial';
         });
+        document.getElementById('faq_btn').addEventListener('click', function () {
+            document.getElementById('faq').style.display = 'none';
+            document.getElementById('main').style.display = 'initial';
+        });
+        document.getElementById('help_btn').addEventListener('click', function () {
+            document.getElementById('main').style.display = 'none';
+            document.getElementById('faq').style.display = 'initial';
+        });
 
         /**
         * Get the URL parameters
@@ -201,28 +308,3 @@
         };
     </script>
 </body>
-
-<!-- <form action="https://sendy.sunhacks.io/subscribe" method="POST" accept-charset="utf-8">
-	<label for="name">Name</label><br/>
-	<input type="text" name="name" id="name"/>
-	<br/>
-	<label for="email">Email</label><br/>
-	<input type="email" name="email" id="email"/>
-    <br/>
-    <label for="FirstName">First Name</label><br/>
-    <input type="text" name="FirstName" id="FirstName"/>
-    <br/>
-    <label for="LastName">Last Name</label><br/>
-    <input type="text" name="LastName" id="LastName"/><br/><br/>
-    <input type="checkbox" name="gdpr" id="gdpr"/>
-    <span><strong>Marketing permission</strong>: I give my consent to  to be in touch with me via email using the information I have provided in this form for the purpose of news, updates and marketing.</span>
-    <br/><br/>
-    <span><strong>What to expect</strong>: If you wish to withdraw your consent and stop hearing from us, simply click the unsubscribe link at the bottom of every email we send or contact us at team@sunhacks.io. We value and respect your personal data and privacy. To view our privacy policy, please visit our website. By submitting this form, you agree that we may process your information in accordance with these terms.</span>
-    <br/><br/><div style="display:none;">
-	<label for="hp">HP</label><br/>
-	<input type="text" name="hp" id="hp"/>
-	</div>
-	<input type="hidden" name="list" value="3iMgiuJkeBTsOxNZWLjDDQ"/>
-	<input type="hidden" name="subform" value="yes"/>
-	<input type="submit" name="submit" id="submit"/>
-</form> -->

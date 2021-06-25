@@ -1,3 +1,18 @@
+@font-face {
+    font-family: 'Microsoft Sans Serif Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Microsoft Sans Serif Regular'), url('/assets/fonts/microsoft-sans-serif/micross.woff') format('woff');
+}
+    
+
+@font-face {
+    font-family: 'Microsoft Sans Serif';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Microsoft Sans Serif'), url('/assets/fonts/microsoft-sans-serif/micross.woff') format('woff');
+}
+
 .centered {
     position: fixed;
     top: 50%;
@@ -14,7 +29,7 @@
     background: linear-gradient(
         90deg
         ,#D0697D,#E6CBCA);
-    font-family: "MS Sans Serif"
+    font-family: "Microsoft Sans Serif Regular", "Arial"
 }
 
 body {
@@ -24,7 +39,7 @@ body {
 }
 
 .window-body {
-    font-family: "MS Sans Serif"
+    font-family: "Microsoft Sans Serif Regular" , "Arial"
 }
 .window-top {
     justify-content: flex-start;
@@ -63,7 +78,7 @@ body {
 }
 
 .title-bar, .window, button, input, label, option, select, textarea, ul.tree-view {
-    font-family: "MS Sans Serif";
+    font-family: "Microsoft Sans Serif Regular";
 }
 
 #firstNameField, #lastNameField, #emailField {
@@ -271,3 +286,5 @@ body {
         }
 
 }
+
+details summary::marker { content: ""; }
