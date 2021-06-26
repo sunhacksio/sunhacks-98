@@ -75,7 +75,7 @@
                             <div class="volunteering">
                                 <p>Interested in...</p>
                                 <section class="field-row">
-                                    <button id="sponsoringBtn"> Sponsoring </button>
+                                    <button id="sponsor"> Sponsoring </button>
                                     <a href="https://forms.gle/vGHTGASK2a1kPi9D8" target="_blank"
                                         rel="noopener noreferrer">
                                         <button id="volunteeringBtn"> Helping out </button>
@@ -86,7 +86,8 @@
                     </div>
                     <div class="window-footer">
                         <hr class="hr--accent">
-                        <p>Question? Click the help button in the top right or send an email to <a href="mailto:team@sunhacks.io">team@sunhacks.io</a>
+                        <p>Question? Click the <a href="#" id="help"> help button</a> or send an email to
+                            <a href="mailto:team@sunhacks.io">team@sunhacks.io</a>
                         </p>
                     </div>
                 </div>
@@ -195,7 +196,7 @@
             </div>
         </div>
         <div class="centered" id="success" style="display: none;">
-            <div class="window subscribed-box">
+            <div class="window sunhacks-window info-box">
                 <div class="title-bar">
                     <div class="title-bar-text">sunhacks 2021 subscribe success</div>
                     <div class="title-bar-controls">
@@ -214,7 +215,7 @@
             </div>
         </div>
         <div class="centered" id="exists" style="display: none;">
-            <div class="window subscribed-box">
+            <div class="window sunhacks-window info-box">
                 <div class="title-bar">
                     <div class="title-bar-text">sunhacks 2021 already subscribed</div>
                     <div class="title-bar-controls">
@@ -232,6 +233,26 @@
                 </div>
             </div>
         </div>
+        <div class="centered" id="sponsorship" style="display:none;">
+            <div class="window sunhacks-window info-box">
+                <div class="title-bar">
+                    <div class="title-bar-text">sunhacks 2021 sponsorship</div>
+                    <div class="title-bar-controls">
+                        <button id="sponsor_btn" aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <p>
+                        By sponsoring sunhacks, you help support the growth of hundreds of students
+                        and reach a worldwide community of technologists. For more
+                        information and our sponsorship packet reach out to us at <a href="mailto:industry@sunhacks.io">industry@sunhacks.io</a> 
+                    </p>
+                    <section class="field-row subscribed">
+                        <button id="sponsor_ok">OK</button>
+                    </section>
+                </div>
+            </div>
+        </div>
         <!-- <div class="task-bar"> 
             <button id="start-btn">
                 <img src="/assets/images/start-button.png" alt="">
@@ -245,6 +266,7 @@
             src="https://s3.amazonaws.com/logged-assets/trust-badge/2022/mlh-trust-badge-2022-white.svg"
             alt="Major League Hacking 2022 Hackathon Season" style="width:100%"></a>
     <script>
+
         const form = document.getElementById('subscribe');
         form.addEventListener("change", () => {
             document.getElementById('submit').disabled = !form.checkValidity()
@@ -258,6 +280,7 @@
             document.getElementById('exists').style.display = 'none';
             document.getElementById('main').style.display = 'initial';
         });
+
         document.getElementById('success_btn').addEventListener('click', function () {
             document.getElementById('success').style.display = 'none';
             document.getElementById('main').style.display = 'initial';
@@ -266,6 +289,7 @@
             document.getElementById('success').style.display = 'none';
             document.getElementById('main').style.display = 'initial';
         });
+
         document.getElementById('faq_btn').addEventListener('click', function () {
             document.getElementById('faq').style.display = 'none';
             document.getElementById('main').style.display = 'initial';
@@ -273,6 +297,23 @@
         document.getElementById('help_btn').addEventListener('click', function () {
             document.getElementById('main').style.display = 'none';
             document.getElementById('faq').style.display = 'initial';
+        });
+        document.getElementById('help').addEventListener('click', function () {
+            document.getElementById('main').style.display = 'none';
+            document.getElementById('faq').style.display = 'initial';
+        });
+
+        document.getElementById('sponsor').addEventListener('click', function () {
+            document.getElementById('main').style.display = 'none';
+            document.getElementById('sponsorship').style.display = 'initial';
+        });
+        document.getElementById('sponsor_btn').addEventListener('click', function () {
+            document.getElementById('sponsorship').style.display = 'none';
+            document.getElementById('main').style.display = 'initial';
+        });
+        document.getElementById('sponsor_ok').addEventListener('click', function () {
+            document.getElementById('sponsorship').style.display = 'none';
+            document.getElementById('main').style.display = 'initial';
         });
 
         /**
