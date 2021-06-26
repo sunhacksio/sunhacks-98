@@ -123,6 +123,7 @@ body {
     flex-direction: row;
     justify-content: stretch;
     align-items: stretch;
+    min-width: 15ch;
 }
 .window-footer {
     text-align: right;
@@ -156,6 +157,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .top-party {
