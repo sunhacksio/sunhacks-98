@@ -34,8 +34,8 @@
     background: linear-gradient(
         90deg
         ,#D0697D,#E6CBCA);
-    /* font-family: "Microsoft Sans Serif Regular", "Arial"; */
-    font-family: "Arial";
+    font-family: "Microsoft Sans Serif Regular", "Arial";
+    /* font-family: "Arial"; */
 }
 
 html {

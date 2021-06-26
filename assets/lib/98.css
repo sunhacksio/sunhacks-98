@@ -19,22 +19,6 @@
   /* Field borders (checkbox, input, etc) flip window-frame and button-shadow */
 }
 
-@font-face {
-  font-family: "Pixelated MS Sans Serif";
-  src: url("ms_sans_serif.woff") format("woff");
-  src: url("ms_sans_serif.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Pixelated MS Sans Serif";
-  src: url("ms_sans_serif_bold.woff") format("woff");
-  src: url("ms_sans_serif_bold.woff2") format("woff2");
-  font-weight: bold;
-  font-style: normal;
-}
-
 body {
   font-family: Arial;
   font-size: 12px;
@@ -50,7 +34,6 @@ option,
 ul.tree-view,
 .window,
 .title-bar {
-  font-family: "Pixelated MS Sans Serif", Arial;
   -webkit-font-smoothing: none;
   font-size: 11px;
 }
@@ -791,5 +774,3 @@ summary:focus {
   width: 16px;
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='16' height='17' viewBox='0 0 16 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 0H0V1V16H1V1H15V0Z' fill='%23DFDFDF'/%3E %3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2 1H1V15H2V2H14V1H2Z' fill='white'/%3E %3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 17H15H0V16H15V0H16V17Z' fill='black'/%3E %3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 1H14V15H1V16H14H15V1Z' fill='%23808080'/%3E %3Crect x='2' y='2' width='12' height='13' fill='%23C0C0C0'/%3E %3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7 4H6V11H7V10H8V9H9V8H10V7H9V6H8V5H7V4Z' fill='black'/%3E %3C/svg%3E");
 }
-
-/*# sourceMappingURL=98.css.map */
