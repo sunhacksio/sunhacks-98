@@ -151,6 +151,13 @@ body {
     font-family: "Microsoft Sans Serif Regular";
 }
 
+.title-bar-controls button {
+    height: 17px;
+    width: 17px;
+    margin: 0px;
+    background-position: top 4px left 5px;
+}
+
 #firstNameField, #lastNameField, #emailField {
     width: 200px;
 }
@@ -166,8 +173,8 @@ body {
     justify-content: flex-end;
 }
 
-.subscribed-box {
-    width: 250px;
+.info-box {
+    width: 60ch;
 }
 .subscribed {
     justify-content: flex-end;
@@ -341,7 +348,7 @@ body {
 /*         .setup { */
 /*             width: 80ch; */
 /*         } */
-/*         .subscribed-box { */
+/*         .info-box { */
 /*             width: 60vw; */
 /*         } */
 /*         body { */
