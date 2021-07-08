@@ -178,13 +178,13 @@ button:disabled {
 .title-bar-controls button[aria-label="Minimize"] {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='6' height='2' viewBox='0 0 6 2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Crect width='6' height='2' fill='black'/%3E %3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: bottom 3px left 4px;
+  background-position: bottom 5px left 5px;
 }
 
 .title-bar-controls button[aria-label="Maximize"] {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='9' height='9' viewBox='0 0 9 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9 0H0V2V8V9H1H8H9V8V2V0ZM8 2H1V8H8V2Z' fill='black'/%3E %3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: top 2px left 3px;
+  background-position: top 4px left 3px;
 }
 
 .title-bar-controls button[aria-label="Restore"] {
@@ -547,7 +547,7 @@ input[type="range"]::-moz-range-track {
     -1px -1px 0 darkgrey, 0 -1px 0 darkgrey, -1px 1px 0 white, 1px -1px darkgrey;
 }
 
-.is-vertical {
+/* .is-vertical {
   display: inline-block;
   width: 4px;
   height: 150px;
@@ -593,7 +593,7 @@ input[type="range"]::-moz-range-track {
 
 .is-vertical > input[type="range"].has-box-indicator::-moz-range-thumb {
   transform: translateY(0px) scaleX(-1);
-}
+} */
 
 select:focus {
   color: #ffffff;

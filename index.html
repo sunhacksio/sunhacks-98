@@ -1,371 +1,601 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="has-navbar-fixed-bottom">
 
 <head>
-    <!-- META -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="sunhacks">
-    <link rel="icon" href="/assets/images/small-pink-sun.svg">
+  <!-- META -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="sunhacks">
+  <link rel="icon" href="/assets/images/SVG/small-pink-sun.svg">
 
-    <meta name="title" content="sunhacks 2020">
-    <meta name="description" content="Get ready for a weekend of building at #sunhacks2021 on October 1st - 3rd!">
-  
-      <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sunhacks.io/">
-    <meta property="og:title" content="sunhacks 2021">
-    <meta property="og:description" content="Get ready for a weekend of building at #sunhacks2021 on October 1st - 3rd!">
-    <meta property="og:image" content="https://sunhacks.io/assets/images/meta-image.png">
-  
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://sunhacks.io/">
-    <meta property="twitter:title" content="sunhacks 2021">
-    <meta property="twitter:description" content="Get ready for a weekend of building at #sunhacks2021 on October 1st - 3rd!">
-    <meta property="twitter:image" content="https://sunhacks.io/assets/images/meta-image.png">
-    
-    <!-- TITLE -->
-    <title>sunhacks 2021</title>
+  <meta name="title" content="sunhacks 2020">
+  <meta name="description" content="Get ready for a weekend of building at #sunhacks2021 on October 1st - 3rd!">
 
-    <!-- STYLESHEETS-->
-    <link rel="stylesheet" href="assets/lib/98.css">
-    <link rel="stylesheet" href="assets/index.css">
-    <script defer="" src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script>
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sunhacks.io/">
+  <meta property="og:title" content="sunhacks 2021">
+  <meta property="og:description" content="Get ready for a weekend of building at #sunhacks2021 on October 1st - 3rd!">
+  <meta property="og:image" content="https://sunhacks.io/assets/images/graphics/meta-image.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://sunhacks.io/">
+  <meta property="twitter:title" content="sunhacks 2021">
+  <meta property="twitter:description"
+    content="Get ready for a weekend of building at #sunhacks2021 on October 1st - 3rd!">
+  <meta property="twitter:image" content="https://sunhacks.io/assets/images/graphics/meta-image.png">
+
+  <!-- TITLE -->
+  <title>sunhacks 2021</title>
+
+  <!-- STYLESHEETS-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="assets/lib/98.css">
+  <link rel="stylesheet" href="assets/index.css">
+  <script defer="" src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script>
 </head>
 
 <body>
-
-    <div class="main">
-
-        <div class="centered" id="main">
-            <div class="window sunhacks-window setup">
-                <div class="title-bar">
-                    <div class="title-bar-text">sunhacks 2021 setup wizard</div>
-                    <div class="title-bar-controls">
-                        <button id="help_btn" aria-label="Help"></button>
-                    </div>
-                </div>
-                <div class="window-body">
-                    <div class="window-top">
-                        <div class="window-splash">
-                            <div class="splash-art">
-                                <img src="assets/images/top-party.svg" alt="" class="top-party">
-                                <img src="assets/images/computer.svg" alt="" class="computer">
-                                <img src="assets/images/bottom-party.svg" alt="" class="bottom-party">
-                            </div>
-                        </div>
-                        <div class="window-info">
-                            <div class="title">welcome to sunhacks</div>
-                            <p><strong>Online and at Arizona State University, October 1st - 3rd 2021</strong></p>
-                            <p>The sunhacks setup wizards (organizers) are installing the 2021 event.
-                                Please wait while registration is being setup...</p>
-                            <form id="subscribe" action="https://sendy.sunhacks.io/subscribe" method="POST"
-                                accept-charset="utf-8" oninput="name.value = FirstName.value + ' ' + LastName.value">
-                                <input type="hidden" name="list" value="3iMgiuJkeBTsOxNZWLjDDQ" />
-                                <input type="hidden" name="name">
-                                <fieldset>
-                                    <legend>Hacker Registration</legend>
-                                    Registration starts <strong>July 19th</strong>. Sign up now to get notified:
-                                    <div class="field-row-stacked" id=firstNameField>
-                                        <label for="FirstName">First Name</label>
-                                        <input id="FirstName" type="text" name="FirstName" required />
-                                    </div>
-                                    <div class="field-row-stacked" id="lastNameField">
-                                        <label for="LastName">Last Name</label>
-                                        <input id="LastName" type="text" name="LastName" required />
-                                    </div>
-                                    <div class="field-row-stacked" id="emailField">
-                                        <label for="email">Email</label>
-                                        <input id="email" type="email" name="email" required />
-                                    </div>
-                                    <div class="field-row-stacked">
-                                        <input type="checkbox" name="gdpr" id="gdpr" required>
-                                        <label for="gdpr">Send me emails about sunhacks</label>
-                                    </div>
-                                    <div class="field-row-stacked">
-                                        <button type="submit" id="submit" disabled>Notify me about sunhacks
-                                            registration</button>
-                                    </div>
-                                </fieldset>
-                            </form>
-
-                            <div class="volunteering">
-                                <p>Interested in...</p>
-                                <section class="field-row">
-                                    <button id="sponsor"> Sponsoring </button>
-                                    <a href="https://forms.gle/vGHTGASK2a1kPi9D8" target="_blank"
-                                        rel="noopener noreferrer">
-                                        <button id="volunteeringBtn"> Helping out </button>
-                                    </a>
-                                </section>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="window-footer">
-                        <hr class="hr--accent">
-                        <p>Question? Click the <a href="#" id="help"> help button</a> or send an email to
-                            <a href="mailto:team@sunhacks.io">team@sunhacks.io</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="window-body footer">
-                    <div class="socials">
-                        <a href="https://www.facebook.com/sunhacksio/" target="_blank" rel="noopener noreferrer"
-                            title="Facebook"><button title="Facebook"><i class="fab fa-facebook-f"></i></button></a>
-                        <a href="https://twitter.com/sunhacksio" target="_blank" rel="noopener noreferrer"
-                            title="Twitter"><button title="Twitter"><i class="fab fa-twitter"></i></button></a>
-                        <a href="https://www.instagram.com/sunhacksio/" target="_blank" rel="noopener noreferrer"
-                            title="Instagram"><button title="Instagram"><i class="fab fa-instagram"></i></button></a>
-                        <a href="http://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank"
-                            rel="noopener noreferrer" title="Code of Conduct"><button title="Code of Conduct"><i
-                                    class="fas fa-file-alt"></i></button></a>
-                    </div>
-                </div>
+  <!-- Top Box -->
+  <section class="hero is-transparent is-halfheight">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="window">
+          <div class="title-bar">
+            <div class="title-bar-text">
+              sunhacks 2021
             </div>
-        </div>
-        <div class="centered" id="faq" style="display:none">
-            <div class="window sunhacks-window faq-box">
-                <div class="title-bar">
-                    <div class="title-bar-text">sunhacks 2021 FAQ</div>
-                    <div class="title-bar-controls">
-                        <button id="faq_btn" aria-label="Close"></button>
-                    </div>
+          </div>
+          <div class="window-body">
+            <div class="columns" id="mobile-columns">
+              <div class="column is-4 splash-art">
+                <img src="assets/images/SVG/computer.svg" alt="sunhacks computer">
+              </div>
+              <div class="column hero-info">
+                <div>
+                  <p class="title is-1">
+                    sunhacks
+                  </p>
+                  <p class="subtitle is-3">
+                    Arizona State University, October&nbsp;1st&nbsp;-&nbsp;3rd,&nbsp;2021
+                  </p>
+                  <p class="subtitle">
+                    Coming online and in person to a stream near you!
+                  </p>
                 </div>
-                <div class="window-body">
-                    <p><strong>Frequently Asked Questions</strong></p>
-                    <ul class="tree-view">
-                        <li>
-                            <strong>what is a hackathon?</strong>
-                            <ul>
-                                <li>
-                                    We consider a hackathon to be a 24-36 hour prototyping marathon. sunhacks is a 36
-                                    hour hackathon this year! Work on software or hardware solutions to real world
-                                    problems, innovative projects, or anything you can think of (even if it’s a silly
-                                    idea)!
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>who can hack?</strong>
-                            <ul>
-                                <li>
-                                    Anybody and everybody over the age of 18 can participate! Arizona State University
-                                    students can attend in-person, however, we are limiting in-person participants at
-                                    our venue and streaming studio, apply early to snag a spot.
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>i've never programmed before, is it okay?</strong>
-                            <ul>
-                                <li>
-                                    Yes! Programmers are not the only people who can participate at a hackathon. We have
-                                    had designers, businesspeople, and all sorts of backgrounds and levels of experience
-                                    attend sunhacks. If you are new to programming, we also have mentors and workshops
-                                    that can teach you how to code! All you need to do is attend, and we’ll support you
-                                    the rest of the way!
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>how much does it cost to participate?</strong>
-                            <ul>
-                                <li>
-                                    sunhacks costs zip, zilch and nada to participate! We will never charge you any sort
-                                    of participation fee.
-                                </li>
-                            </ul>
-                            </details>
-                        </li>
-                        <li>
-                            <strong>what are the rules?</strong>
-                            <ul>
-                                <li>
-                                    Follow the MLH code of conduct! If you are participating with a team, a maximum of 4
-                                    people are allowed. Regardless of whether you are in a team or on your own, only one
-                                    project can be submitted for the weekend.
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>can I be a mentor/judge/speaker?</strong>
-                            <ul>
-                                <li>
-                                    Our participation rules apply (see: “who can hack”), but we are open to making
-                                    exceptions where applicable. All are eligible to be a mentor or speaker regardless
-                                    of prior experience. If you are a hacker you cannot be a judge though. As we have
-                                    limited space for speakers and judges, those will be selected based on talk or
-                                    experience respectively and you will receive confirmation from us when it comes
-                                    time.
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>can I request additional accommodations?</strong>
-                            <ul>
-                                <li>
-                                    Absolutely. We will be providing closed captioning, expect our speakers to provide
-                                    additional accessible resources, and have multiple methods of interacting with our
-                                    event through Discord. However, we can always do better. We encourage you to inform
-                                    us through our registration, volunteer form, or via email as soon as possible so we
-                                    can incorporate your needs and continue shaping the environment toward a more
-                                    inclusive future for all.
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+                <section class="field-row" style="justify-content: flex-end">
+                  <button onclick="window.open('https://register.sunhacks.io')" type="button">
+                    Register to Attend
+                  </button>
+                  <button onclick="window.open('https://forms.gle/vGHTGASK2a1kPi9D8')" type="button">
+                    Become a Volunteer
+                  </button>
+                </section>
+              </div>
             </div>
+          </div>
         </div>
-        <div class="centered" id="success" style="display: none;">
-            <div class="window sunhacks-window info-box">
-                <div class="title-bar">
-                    <div class="title-bar-text">sunhacks 2021 subscribe success</div>
-                    <div class="title-bar-controls">
-                        <button id="success_btn" aria-label="Close"></button>
-                    </div>
-                </div>
-                <div class="window-body">
-                    <p>
-                        You have been successfully added to the sunhacks 2021 mailing list! We will let you know
-                        when
-                        the full site launches and registration opens.
-                    </p>
-                    <section class="field-row subscribed">
-                        <button id="success_ok">OK</button>
-                    </section>
-                </div>
-            </div>
-        </div>
-        <div class="centered" id="exists" style="display: none;">
-            <div class="window sunhacks-window info-box">
-                <div class="title-bar">
-                    <div class="title-bar-text">sunhacks 2021 already subscribed</div>
-                    <div class="title-bar-controls">
-                        <button id="exists_btn" aria-label="Close"></button>
-                    </div>
-                </div>
-                <div class="window-body">
-                    <p>
-                        You're already subscribed to the sunhacks 2021 mailing list! We will let you know when the
-                        full
-                        site launches and registration opens.
-                    </p>
-                    <section class="field-row subscribed">
-                        <button id="exists_ok">OK</button>
-                    </section>
-                </div>
-            </div>
-        </div>
-        <div class="centered" id="sponsorship" style="display:none;">
-            <div class="window sunhacks-window info-box">
-                <div class="title-bar">
-                    <div class="title-bar-text">sunhacks 2021 sponsorship</div>
-                    <div class="title-bar-controls">
-                        <button id="sponsor_btn" aria-label="Close"></button>
-                    </div>
-                </div>
-                <div class="window-body">
-                    <p>
-                        By sponsoring sunhacks, you help support the growth of hundreds of students
-                        and reach a worldwide community of technologists. For more
-                        information and our sponsorship packet reach out to us at <a
-                            href="mailto:industry@sunhacks.io">industry@sunhacks.io</a>
-                    </p>
-                    <section class="field-row subscribed">
-                        <button id="sponsor_ok">OK</button>
-                    </section>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
-    <a id="mlh-trust-badge"
-        style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000"
-        href="https://mlh.io/seasons/2022/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2022-season&utm_content=white"
-        target="_blank"><img
-            src="https://s3.amazonaws.com/logged-assets/trust-badge/2022/mlh-trust-badge-2022-white.svg"
-            alt="Major League Hacking 2022 Hackathon Season" style="width:100%"></a>
-    <script>
+  </section>
 
-        const form = document.getElementById('subscribe');
-        form.addEventListener("change", () => {
-            document.getElementById('submit').disabled = !form.checkValidity()
-        });
+  <!-- Hackathon info -->
+  <section class="section">
+    <div class="container">
+      <div class="tile is-ancestor">
+        <div class="tile is-vertical">
+          <div class="tile">
+            <div class="tile is-vertical is-3 is-hidden-mobile">
+              <div class="tile is-parent">
+                <div class="tile is-child has-bottom-right">
+                  <div class="window">
+                    <div class="title-bar">
+                      <div class="title-bar-text">top_splash.svg</div>
+                    </div>
+                    <div class="window-body">
+                      <img src="assets/images/SVG/top-party.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tile is-parent">
+                <div class="tile is-child">
+                  <div class="window">
+                    <div class="title-bar">
+                      <div class="title-bar-text">paper_airplanes.png</div>
+                    </div>
+                    <div class="window-body">
+                      <img src="assets/images/photos/airplanes.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tile is-parent">
+                <div class="tile is-child">
+                </div>
+              </div>
+            </div>
+            <div class="tile is-vertical is-6">
+              <div class="tile is-parent">
+                <div class="tile is-child">
+                  <div class="window">
+                    <div class="title-bar">
+                      <div class="title-bar-text">What is sunhacks?</div>
+                    </div>
+                    <div class="window-body">
+                      <p class="title is-2">
+                        What is sunhacks?
+                      </p>
+                      <p class="is-size-4">
+                        sunhacks is a yearly Fall hackathon (ideathon, coding marathon, prototyping marathon, etc)
+                        designed to support students
+                        in their innovative journeys. sunhacks is for students of all skill levels, and our job as
+                        organizers is to support you
+                        by providing the resources you need to achieve your development dreams. We provide you with
+                        workshops, mentors,
+                        community connections, and peers who are motivated to help each other succeed and reach their
+                        goals.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tile is-parent">
+                <div class="tile is-child">
+                  <div class="window">
+                    <div class="title-bar">
+                      <div class="title-bar-text">hardware_hacks.png</div>
+                    </div>
+                    <div class="window-body">
+                      <img src="assets/images/photos/hardware.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tile is-vertical is-3 is-hidden-mobile">
+              <div class="tile is-parent">
+                <div class="tile is-child">
+                </div>
+              </div>
+              <div class="tile is-parent">
+                <div class="tile is-child">
+                  <div class="window is-left">
+                    <div class="title-bar">
+                      <div class="title-bar-text">virtual_reality.png</div>
+                    </div>
+                    <div class="window-body">
+                      <img src="assets/images/photos/vr_team.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tile is-parent">
+                <div class="tile is-child">
+                  <div class="window is-left">
+                    <div class="title-bar">
+                      <div class="title-bar-text">bottom_splash.svg</div>
+                    </div>
+                    <div class="window-body">
+                      <img src="assets/images/SVG/bottom-party.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        document.getElementById('exists_btn').addEventListener('click', function () {
-            document.getElementById('exists').style.display = 'none';
-            document.getElementById('main').style.display = 'initial';
-        });
-        document.getElementById('exists_ok').addEventListener('click', function () {
-            document.getElementById('exists').style.display = 'none';
-            document.getElementById('main').style.display = 'initial';
-        });
+  <!-- Talking Points -->
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          <div class="window">
+            <div class="title-bar">
+              <div class="title-bar-text">talking-point.txt</div>
+            </div>
+            <div class="window-body">
+              <p class="title is-2">
+                Hybrid Hackathon?
+              </p>
+              <p class="is-size-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ea itaque sapiente obcaecati
+                reiciendis sequi saepe architecto unde quis adipisci aut magni incidunt, nulla tempora maiores inventore
+                labore. Adipisci, blanditiis!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="window">
+            <div class="title-bar">
+              <div class="title-bar-text">talking-point (2).txt</div>
+            </div>
+            <div class="window-body">
+              <p class="title is-2">
+                Beginner Friendly.
+              </p>
+              <p class="is-size-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ea itaque sapiente obcaecati
+                reiciendis sequi saepe architecto unde quis adipisci aut magni incidunt, nulla tempora maiores inventore
+                labore. Adipisci, blanditiis!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="window">
+            <div class="title-bar">
+              <div class="title-bar-text">talking-point (3).txt</div>
+            </div>
+            <div class="window-body">
+              <p class="title is-2">
+                Point 3
+              </p>
+              <p class="is-size-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ea itaque sapiente obcaecati
+                reiciendis sequi saepe architecto unde quis adipisci aut magni incidunt, nulla tempora maiores inventore
+                labore. Adipisci, blanditiis!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        document.getElementById('success_btn').addEventListener('click', function () {
-            document.getElementById('success').style.display = 'none';
-            document.getElementById('main').style.display = 'initial';
-        });
-        document.getElementById('success_ok').addEventListener('click', function () {
-            document.getElementById('success').style.display = 'none';
-            document.getElementById('main').style.display = 'initial';
-        });
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="window">
+        <div class="title-bar">
+          <div class="title-bar-text">Frequently Asked Questions</div>
+        </div>
+        <div class="window-body">
+          <p class="title is-2">Frequently Asked Questions</strong></p>
+          <ul class="tree-view">
+            <li>
+              <strong>what is a hackathon?</strong>
+              <ul>
+                <li>
+                  We consider a hackathon to be a 24-36 hour prototyping marathon. sunhacks is a 36
+                  hour hackathon this year! Work on software or hardware solutions to real world
+                  problems, innovative projects, or anything you can think of (even if it’s a silly
+                  idea)!
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>who can hack?</strong>
+              <ul>
+                <li>
+                  Any student over the age of 18 can participate! Arizona State University
+                  students can attend in-person, however, we are limiting in-person participants at
+                  our venue and streaming studio, apply early to snag a spot. If you've recently graduated
+                  you can still participate if you're within one year of your graduation.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>i've never programmed before, is it okay?</strong>
+              <ul>
+                <li>
+                  Yes! Programmers are not the only people who can participate at a hackathon. We have
+                  people from all sorts of backgrounds and levels of experience attend sunhacks.
+                  If you are new to programming, we also have mentors and workshops
+                  that can teach you how to code! All you need to do is attend, and we’ll support you
+                  the rest of the way!
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>how much does it cost to participate?</strong>
+              <ul>
+                <li>
+                  sunhacks costs zip, zilch and nada to participate! We will never charge you any sort
+                  of participation fee.
+                </li>
+              </ul>
+              </details>
+            </li>
+            <li>
+              <strong>what are the rules?</strong>
+              <ul>
+                <li>
+                  Follow the MLH code of conduct! If you are participating with a team, a maximum of 4
+                  people are allowed. Regardless of whether you are in a team or on your own, only one
+                  project can be submitted for the weekend.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>can I be a mentor/judge/speaker?</strong>
+              <ul>
+                <li>
+                  Our participation rules apply (see: “who can hack”), but we are open to making
+                  exceptions where applicable. All are eligible to be a mentor or speaker regardless
+                  of prior experience, however, a hacker cannot be a judge. As we have limited space
+                  for speakers and judges, those will be selected based on talk or
+                  experience respectively and you will receive confirmation from us when it comes
+                  time.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>can I request additional accommodations?</strong>
+              <ul>
+                <li>
+                  Absolutely. We will be providing closed captioning, expect our speakers to provide
+                  additional accessible resources, and have multiple methods of interacting with our
+                  event through Discord. However, we can always do better. We encourage you to inform
+                  us through our registration, volunteer form, or via email as soon as possible so we
+                  can incorporate your needs and continue shaping the environment toward a more
+                  inclusive future for all. If you have any questions reach out to us at <a
+                    href="mailto:team@sunhacks.io">team@sunhacks.io</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        document.getElementById('faq_btn').addEventListener('click', function () {
-            document.getElementById('faq').style.display = 'none';
-            document.getElementById('main').style.display = 'initial';
-        });
-        document.getElementById('help_btn').addEventListener('click', function () {
-            document.getElementById('main').style.display = 'none';
-            document.getElementById('faq').style.display = 'initial';
-        });
-        document.getElementById('help').addEventListener('click', function () {
-            document.getElementById('main').style.display = 'none';
-            document.getElementById('faq').style.display = 'initial';
-        });
+  <!-- Our Team -->
+  <section class="section">
+    <div class="container is-100ch">
+      <div class="window">
+        <div class="title-bar">
+          <div class="title-bar-text">
+            Meet the Organizers
+          </div>
+        </div>
+        <div class="window-body">
+          <ul class="tree-view">
+            <li>
+              <i class="fas fa-folder-open"></i>
+              C:\sunhacks\2021\organizers
+            </li>
+          </ul>
+          <ul class="tree-view">
+            <div class="columns is-multiline is-mobile">
+              <div class="column is-one-quarter-desktop is-one-quarter-tablet is-half-mobile">
+                <img class="organizer" src="assets/images/photos/organizers/jake.png" alt="Jake B.">
+                <p class="has-text-centered is-size-5 has-text-weight-bold mt-0	">
+                  Jake B.
+                </p>
+              </div>
+              <div class="column is-one-quarter-desktop is-one-quarter-tablet is-half-mobile">
+                <img class="organizer" src="assets/images/photos/organizers/peanut.png" alt="Peanut B.">
+                <p class="has-text-centered is-size-5 has-text-weight-bold mt-0	">
+                  Peanut B.
+                </p>
+              </div>
+              <div class="column is-one-quarter-desktop is-one-quarter-tablet is-half-mobile">
+                <img class="organizer" src="assets/images/photos/organizers/paul.png" alt="Paul H.">
+                <p class="has-text-centered is-size-5 has-text-weight-bold mt-0	">
+                  Paul H.
+                </p>
+              </div>
+              <div class="column is-one-quarter-desktop is-one-quarter-tablet is-half-mobile">
+                <img class="organizer" src="assets/images/photos/organizers/cecilia.png" alt="Paul H.">
+                <p class="has-text-centered is-size-5 has-text-weight-bold mt-0	">
+                  Cecilia L.
+                </p>
+              </div>
+              <div class="column is-one-quarter-desktop is-one-quarter-tablet is-half-mobile">
+                <img class="organizer" src="assets/images/photos/organizers/thaddeus.png" alt="Paul H.">
+                <p class="has-text-centered is-size-5 has-text-weight-bold mt-0	">
+                  Thaddeus M.
+                </p>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        document.getElementById('sponsor').addEventListener('click', function () {
-            document.getElementById('main').style.display = 'none';
-            document.getElementById('sponsorship').style.display = 'initial';
-        });
-        document.getElementById('sponsor_btn').addEventListener('click', function () {
-            document.getElementById('sponsorship').style.display = 'none';
-            document.getElementById('main').style.display = 'initial';
-        });
-        document.getElementById('sponsor_ok').addEventListener('click', function () {
-            document.getElementById('sponsorship').style.display = 'none';
-            document.getElementById('main').style.display = 'initial';
-        });
+  <section class="section">
+    <div class="container" style="max-width: 80ch;">
+      <div class="window">
+        <div class="title-bar">
+          <div class="title-bar-text">
+            Important Information
+          </div>
+        </div>
+        <div class="window-body has-text-centered">
+          <div class="field-row" style="justify-content: center">
+            <button onclick="window.open('http://static.mlh.io/docs/mlh-code-of-conduct.pdf')" type="button">
+              MLH Code of Conduct
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        /**
-        * Get the URL parameters
-        * source: https://css-tricks.com/snippets/javascript/get-url-variables/
-        * @param  {String} url The URL
-        * @return {Object}     The URL parameters
-        */
-        var getParams = function (url) {
-            var params = {};
-            var parser = document.createElement('a');
-            parser.href = url;
-            var query = parser.search.substring(1);
-            var vars = query.split('&');
-            for (var i = 0; i < vars.length; i++) {
-                var pair = vars[i].split('=');
-                params[pair[0]] = decodeURIComponent(pair[1]);
-            }
-            return params;
-        };
+  <!-- Navbar -->
+  <nav class="navbar is-fixed-bottom" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <button onclick="location.href = 'https://sunhacks.io/'" type="button">
+        sunhacks
+      </button>
+      <div class="task-bar__divider">
+      </div>
+      <div class="socials is-hidden-tablet">
+        <button onclick="window.open('https://www.instagram.com/sunhacksio/')" type="button">
+          <i class="fab fa-instagram"></i>
+        </button>
+        <button onclick="window.open('https://twitter.com/sunhacksio')" type="button">
+          <i class="fab fa-twitter"></i>
+        </button>
+        <button onclick="window.open('https://www.facebook.com/sunhacksio/')" type="button">
+          <i class="fab fa-facebook-f"></i>
+        </button>
+        <button onclick="window.open('https://www.linkedin.com/company/sunhacksio')" type="button">
+          <i class="fab fa-linkedin"></i>
+        </button>
+      </div>
+    </div>
+    <div class="navbar-menu">
+      <button onclick="window.open('https://www.instagram.com/sunhacksio/')" type="button">
+        <i class="fab fa-instagram"></i>
+        instagram
+      </button>
+      <button onclick="window.open('https://twitter.com/sunhacksio')" type="button">
+        <i class="fab fa-twitter"></i>
+        twitter
+      </button>
+      <button onclick="window.open('https://www.facebook.com/sunhacksio/')" type="button">
+        <i class="fab fa-facebook-f"></i>
+        facebook
+      </button>
+      <button onclick="window.open('https://www.linkedin.com/company/sunhacksio')" type="button">
+        <i class="fab fa-linkedin"></i>
+        linkedin
+      </button>
+    </div>
+    <div class="navbar-end">
+      <div class="task-bar__divider">
+      </div>
+      <div class="task-bar__tray">
+        <img src="assets/images/SVG/black-logo.svg" id="task-bar-logo" alt="sunhacks logo">
+        <div class="time" id="timer">
+          T-XX:XX:XX:XX
+        </div>
+      </div>
+    </div>
+  </nav>
 
-        window.onload = function () {
-            const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.has('success')) {
-                window.document.getElementById('success').style.display = "initial";
-                window.document.getElementById('main').style.display = 'none';
-            }
-            else if (urlParams.has('exists')) {
-                window.document.getElementById('exists').style.display = "initial";
-                window.document.getElementById('main').style.display = 'none';
-            }
-        };
-    </script>
+  <!-- Easter Eggs -->
+  <div class="eggs">
+    <div class="easter">
+      <div class="window">
+        <div class="title-bar">
+          <div class="title-bar-text">Pop-up</div>
+          <div class="title-bar-controls">
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="window-body">
+          <img
+            src="https://preview.redd.it/tdzy9xxc0e671.png?width=640&crop=smart&auto=webp&s=aadf2b1bfc2268a436fabaa48b8c5866af98dcab"
+            alt="">
+        </div>
+      </div>
+    </div>
+    <div class="easter">
+      <div class="window">
+        <div class="title-bar">
+          <div class="title-bar-text">Pop-up</div>
+          <div class="title-bar-controls">
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="window-body">
+          <img
+            src="https://preview.redd.it/ok6t99rtsmu61.jpg?width=640&crop=smart&auto=webp&s=4f7314e2f5c58869d15bbd4a78d00387519e915a"
+            alt="">
+        </div>
+      </div>
+    </div>
+    <div class="easter">
+      <div class="window">
+        <div class="title-bar">
+          <div class="title-bar-text">Pop-up</div>
+          <div class="title-bar-controls">
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="window-body">
+          <img
+            src="https://external-preview.redd.it/pcr6WACX7jfXdC2lGUFDgDnl8qdEZ99ucCKU-YeH2KM.jpg?width=640&crop=smart&auto=webp&s=b29c0e04a60ae81871627f3331244d71c241e70a"
+            alt="">
+        </div>
+      </div>
+    </div>
+    <div class="easter">
+      <div class="window">
+        <div class="title-bar">
+          <div class="title-bar-text">Pop-up</div>
+          <div class="title-bar-controls">
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="window-body">
+          <img
+            src="https://preview.redd.it/fnxg3y9mdwp51.jpg?width=640&crop=smart&auto=webp&s=3d76bb4212747aed78436f40a61062868c3bb7ae"
+            alt="">
+        </div>
+      </div>
+    </div>
+    <div class="easter">
+      <div class="window">
+        <div class="title-bar">
+          <div class="title-bar-text">Pop-up</div>
+          <div class="title-bar-controls">
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="window-body">
+          <img
+            src="https://preview.redd.it/vlm8pkxd0cu61.jpg?width=640&crop=smart&auto=webp&s=d8e8b3783aeb21dc21ddc5b558c1008401bc51bc"
+            alt="">
+        </div>
+      </div>
+    </div>
+    <div class="easter">
+      <div class="window">
+        <div class="title-bar">
+          <div class="title-bar-text">Pop-up</div>
+          <div class="title-bar-controls">
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="window-body">
+          <img
+            src="https://preview.redd.it/jc8dp875r2571.jpg?width=640&crop=smart&auto=webp&s=360860582e51760794dbe7cd069c67bad31abf67"
+            alt="">
+        </div>
+      </div>
+    </div>
+    <div class="easter">
+      <div class="window">
+        <div class="title-bar">
+          <div class="title-bar-text">Pop-up</div>
+          <div class="title-bar-controls">
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="window-body">
+          <img
+            src="https://preview.redd.it/rsfpoxg0vl571.png?width=640&crop=smart&auto=webp&s=43a89367d5d6dc3fb110b91ae4c81af2103f5976"
+            alt="">
+        </div>
+      </div>
+    </div>
+    <div class="easter">
+      <div class="window">
+        <div class="title-bar">
+          <div class="title-bar-text">Pop-up</div>
+          <div class="title-bar-controls">
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="window-body">
+          <img
+            src="https://external-preview.redd.it/QDlvMvNZbGK3BAMhlHmIrFnwTBkWE-TMNyWyndVbFUs.jpg?width=640&crop=smart&auto=webp&s=591ccad02b30a003409828472bcfa2b43ac2241a"
+            alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/scripts/easter.js"></script>
+  <script src="assets/scripts/countdown.js"></script>
 </body>
