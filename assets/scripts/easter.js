@@ -31,9 +31,9 @@ function focus(egg) {
 
 function dragElement(elmnt) {
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-    if (document.getElementById(elmnt.id + "header")) {
+    if (elmnt.querySelector(".title-bar")) {
       // if present, the header is where you move the DIV from:
-      document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+      elmnt.querySelector(".title-bar").onmousedown = dragMouseDown;
     } else {
       // otherwise, move the DIV from anywhere inside the DIV:
       elmnt.onmousedown = dragMouseDown;
@@ -42,12 +42,14 @@ function dragElement(elmnt) {
     function dragMouseDown(e) {
       e = e || window.event;
       e.preventDefault();
-      // get the mouse cursor position at startup:
-      pos3 = e.clientX;
-      pos4 = e.clientY;
-      document.onmouseup = closeDragElement;
-      // call a function whenever the cursor moves:
-      document.onmousemove = elementDrag;
+      if(!(e.target instanceof HTMLButtonElement)){
+        // get the mouse cursor position at startup:
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        // call a function whenever the cursor moves:
+        document.onmousemove = elementDrag;
+      }
     }
   
     function elementDrag(e) {
@@ -113,12 +115,12 @@ eggs.forEach(egg => {
     button.addEventListener("click", function() {
         egg.style.display = 'none';
     });
-    egg.addEventListener("click", function(event) {
+    egg.addEventListener("mousedown", function(event) {
         if(!(event.target instanceof HTMLButtonElement)) {
             focus(egg);
         }
     });
-    
+    dragElement(egg);
 });
   
 document.getElementById('task-bar-logo').addEventListener("click", function(){
