@@ -12,6 +12,11 @@
     display: none;
 }
 
+img.egg{
+    max-height: 50vh;
+    max-width: 50vw;
+}
+
 .navbar {
     height: 2rem;
     min-height: auto;
@@ -198,7 +203,7 @@ button {
 
 
 .tree-view * {
-    font-size: 12pt;
+    font-size: 14pt;
 }
 
 ul.tree-view a {
