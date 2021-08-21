@@ -6,6 +6,10 @@
     max-width: 100ch !important;
 }
 
+.is-75ch {
+    max-width: 75ch !important;
+}
+
 .easter {
     position: fixed;
     z-index: 29;
